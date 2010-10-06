@@ -9,14 +9,13 @@ using namespace qrk;
 class vtkHokuyo : public vtkPolyDataAlgorithm
 {
 public:
-  vtkTypeRevisionMacro(vtkHokuyo,vtkPolyDataAlgorithm);
+  vtkTypeMacro(vtkHokuyo,vtkPolyDataAlgorithm);
   static vtkHokuyo *New();
 
 protected:
   vtkHokuyo();
   ~vtkHokuyo(){}
 
-  int FillOutputPortInformation( int port, vtkInformation* info );
   int RequestData(vtkInformation *, vtkInformationVector **, vtkInformationVector *);
 
 private:
